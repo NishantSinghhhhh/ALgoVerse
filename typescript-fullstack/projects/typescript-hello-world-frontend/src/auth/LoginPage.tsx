@@ -55,7 +55,6 @@ export default function LoginPage() {
     if (githubUsername) Cookie.set("pq_githubUsername", githubUsername, { expires: 30 });
   }, [githubUsername]);
 
-// after: const { user, setUser } = useUser();
 useEffect(() => {
   if (!user) return;
   console.log("🆔 User email:", user.email);
@@ -98,8 +97,6 @@ useEffect(() => {
     }
   }, [setUser]);
   
-
-
   const handleInitialLogin = async (e: React.FormEvent) => {
     e.preventDefault();
     if (!role) return;

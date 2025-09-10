@@ -67,7 +67,6 @@ app.get(
       const githubUsername = profile.username;
 
       await connectDB();
-// ...
     const dbUser = await User.findOneAndUpdate(
       { githubUsername },
       {
